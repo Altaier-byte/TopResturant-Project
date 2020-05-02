@@ -1,0 +1,68 @@
+<%- include("./partials/header") %>
+<body class="register">
+<div class="container">
+	<div clas="row">
+<h1 style="text-align: center">Sign up</h1>
+
+<div style="width:30%; margin: 25px auto ">
+<form class="form-horizontal" action="/register" method="POST">
+	<div class="form-group">
+		<div class="col-lg-12">
+	<input name="username" type="text" placeholder="Username" class="form-control">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-lg-12">
+	<input name="password" type="password" placeholder="Password" class="form-control">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-lg-12">
+	<input name="firstName" type="text" placeholder="First Name" required class="form-control">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-lg-12">
+	<input name="lastName" type="text" placeholder="Last Name" required class="form-control">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-lg-12">
+	<input name="email" type="email" placeholder="John.smith@somthing.com" required class="form-control">
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-lg-12">
+	<input name="avatar" type="text" placeholder="Avatar Url" class="form-control">
+		</div>
+	</div>
+	
+			
+		<div class="form-group">
+		<div class="col-lg-12">
+			<button class= "btn btn-lg btn-success btn-block">Sign up</button>
+		</div>
+			</div>
+</form>
+	<a href="/login">Already have an account?</a>
+	</div>
+	</div>
+</div>
+
+
+<%- include("./partials/footer") %>
+
+		
+		
+	
+	
+			
+	
+		
+
+		

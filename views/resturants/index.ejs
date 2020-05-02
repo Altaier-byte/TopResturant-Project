@@ -1,0 +1,46 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+     <header id="jumbo1" class="jumbotron">
+         <div class="container">
+             <h1>Welcome To Top Resturant!</h1>
+             <p>View our resturant reviews coming from all over the world</p>
+             <p>
+                <a class="btn btn-success btn-lg" href="/resturants/new">Add New Resrurant Review</a>
+             </p>
+			 <p>
+				 <form action="/resturants" method="GET" class="form-inline"> 
+					 <div>
+						 <input type="text" name="search" placeholder="Resrurant Review Search" class="form-control">
+						 <input type="submit" value="Search" class="btn btn-default">
+						 
+					 </div>
+			 </form>
+			 </p>
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% resturants.forEach(function(resturant){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail" id="thumbnail1">
+                   <img id=timg1 src="<%= resturant.image %>">
+                   <div id="cap1" class="caption">
+                       <h4><%= resturant.name %></h4>
+					   
+                   </div>
+					 <p>
+                       <a href="/resturants/<%= resturant._id %>" class="btn btn-success">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include("../partials/footer") %>

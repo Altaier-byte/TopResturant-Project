@@ -1,0 +1,55 @@
+<%- include("../partials/header") %>
+
+
+<div class="container">
+<div class="row">
+	
+<h1 id="h1new" style="text-align: center">Create a New Resturant Review</h1>
+
+<div style="width:30%; margin: 25px auto ">
+
+<form class="form-horizontal" action="/resturants" method="POST">
+	
+  <div class="form-group">
+    <div class="col-lg-12">
+      <input type="text" name="name" class="form-control" placeholder="Resturant Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-12">
+      <input type="text" class="form-control" name="image" placeholder="Resturant Image URL">
+    </div>
+  </div>
+	
+	<div class="form-group">
+    <div class="col-lg-12">
+      <input type="number" name="price" class="form-control" placeholder="Price/meal" min="0.00" step="0.25" required>
+    </div>
+  </div>
+	
+	<div class="form-group">
+    <div class="col-lg-12">
+		<textarea id="desctxt" name="description" placeholder="Resturant Description" class="form-control" rows="10"></textarea>
+		
+    </div> 
+	</div>
+	
+
+	
+    <div class="form-group">
+     <div class="col-lg-12" >
+		 		<button id="btn-new-form" type="submit" class="btn bnt-lg btn-block btn-success">Add a review</button>
+
+		</div>
+    </div>
+  
+</form>
+<a href="/resturants">Go Back</a>
+</div>
+	</div>
+</div>
+
+
+
+
+<%- include("../partials/footer") %>
